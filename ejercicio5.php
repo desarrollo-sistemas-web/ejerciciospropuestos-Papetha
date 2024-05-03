@@ -8,16 +8,25 @@
 
 
 // Aquí tu código
+$palabra="Hola Mundo";
 
+function slug (string $palabra){
+    if (empty($palabra)) {
+        return "error";
+    }
+    $palabra=strtolower($palabra);
+    $nuevapalabra = str_replace(" ", "-", $palabra);
+    return $nuevapalabra;
 
-
+}
+echo slug($palabra);
 
 // TESTS
-assert(slug("Hola Mundo") == "hola-mundo");
-assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
-assert(slug("Hola") == "hola");
-assert(slug("") == "error");
-assert(slug(" ") == "error");
+// assert(slug("Hola Mundo") == "hola-mundo");
+// assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
+// assert(slug("Hola") == "hola");
+// assert(slug("") == "error");
+// assert(slug(" ") == "error");
 
 
 

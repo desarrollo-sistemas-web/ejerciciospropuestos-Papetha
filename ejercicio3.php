@@ -6,8 +6,20 @@
 
 // Aquí tu código
 
-
-
+function operacion(int $num1, int $num2, string $num3){
+    if ($num3=='+') {
+       return $num1 + $num2;
+    }elseif ($num3=='-') {
+       return $num1 - $num2;
+    }elseif ($num3=='*') {
+        return $num1 * $num2;
+    }elseif ($num3=='/') {
+        return $num1 / $num2;
+    }elseif ($num3=='') {
+        return -1;
+    }
+}
+operacion(2,2,'x');
 
 // TESTS
 assert(operacion(1, 1, '+') == 2);

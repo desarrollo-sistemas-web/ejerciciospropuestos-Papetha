@@ -7,7 +7,15 @@
 
 // Aquí tu código
 
-
+function perimetroTriangulo($cat1,  $cat2, $hipo){
+    if ($cat1+$cat2>$hipo and $cat2+$hipo>$cat1 and $hipo+$cat1>$cat2) {
+        return $cat1+$cat2+$hipo;
+    }
+    else {
+        return -1;
+    }
+}
+perimetroTriangulo(2,2,2);
 
 // TESTS
 assert(perimetroTriangulo(1, 1, 1) == 3);
