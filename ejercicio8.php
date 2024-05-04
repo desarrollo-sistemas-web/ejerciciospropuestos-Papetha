@@ -8,7 +8,12 @@
 
 // Aquí tu código
 
-
+function palindromo ($frase){
+    $frase=strtolower(str_replace("´ ","",$frase));
+    return $frase === strrev($frase);
+}
+echo palindromo($frase);
+palindromo("Anita lava la tina");
 
 // TESTS
 assert(palindromo("Anita lava la tina") == true);

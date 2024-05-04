@@ -7,7 +7,7 @@
 
 // Aquí tu código
 
-function perimetroTriangulo($cat1,  $cat2, $hipo){
+function perimetroTriangulo($cat1, $cat2, $hipo){
     if ($cat1+$cat2>$hipo and $cat2+$hipo>$cat1 and $hipo+$cat1>$cat2) {
         return $cat1+$cat2+$hipo;
     }
