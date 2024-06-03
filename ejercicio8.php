@@ -8,11 +8,14 @@
 
 // Aquí tu código
 
-function palindromo ($frase){
-    $frase=strtolower(str_replace("´ ","",$frase));//a la variable frase la convierto en minuscula y ademas reemplazo espacios y signo de puntuacion por nada
-    return $frase === strrev($frase); //retorno $frase si es identico a la reversa, utilizando strrev, de la $frase
+function palindromo (string $frase){
+    $frase=strtolower(str_replace("/[^a-z0-9] ","",$frase));//a la variable frase la convierto en minuscula y ademas reemplazo espacios y signo de puntuacion por nada
+    if ($frase === strrev($frase)) { //si  $frase es identico a la reversa, utilizando strrev, de la $frase
+        return true;
+    }else{ //sino
+        return false;
+    }
 }
-echo palindromo($frase);
 palindromo("Anita lava la tina");
 
 // TESTS

@@ -20,6 +20,7 @@ function primos(){
             $numeros[]=$i;
         }
     }
+    echo $numeros;
     return $numeros; //retorno el array
 }
 primos();

@@ -49,8 +49,10 @@ function puntuacion($resultados){
 
     return array ($promedio, $minimo, $maximo);//retorno un array con los resultados de min,max y promedio.
 }
-puntuacion ($puntuaciones,$puntuaciones2);
-// TESTS
+puntuacion($puntuaciones);
+
+
+//TESTS
 assert(puntuacion($puntuaciones) == [
     "promedio" => 5.5,
     "max" => 9,

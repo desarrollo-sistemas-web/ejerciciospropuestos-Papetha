@@ -12,7 +12,7 @@ for ($i = 0; $i < 10; $i++) {
 print_r($numeros);
 
 function mayorDelArreglo($numeros){
-    if ($numeros==[]) {
+    if (empty($numeros)) {
         return -1;
     }else {
         echo max($numeros);
