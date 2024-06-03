@@ -5,9 +5,21 @@
 
 
 // Aquí tu código
+$numeros = [];
+for ($i = 0; $i < 10; $i++) {
+    $numeros[] = rand(1, 100);
+}
+print_r($numeros);
 
-
-
+function mayorDelArreglo($numeros){
+    if (empty($numeros)) {
+        return -1;
+    }else {
+        echo max($numeros);
+        return max($numeros);
+    }
+}
+mayorDelArreglo($numeros);
 
 // TESTS
 assert(mayorDelArreglo([1, 2, 3, 4, 5]) == 5);

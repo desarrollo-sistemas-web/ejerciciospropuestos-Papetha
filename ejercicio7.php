@@ -37,10 +37,22 @@ $puntuaciones2 = [
 
 // Aquí tu código
 
+function puntuacion($resultados){
+    $valor=array_values($resultados);//creo una variable llamado valor al cual le pido el retorno de los valores que hay en el array resultados
+
+    //cuentas necesarias
+    $total=count($valor);//count cuenta los elementos dentro de la variable valor
+    $suma=array_sum($valor);//suma los valores que me retorno el array en la variable valor
+    $promedio=$suma/$total;//saco el promedio 
+    $minimo=min($valor);//min valor de un array
+    $maximo=max($valor);//max valor de un array
+
+    return array ($promedio, $minimo, $maximo);//retorno un array con los resultados de min,max y promedio.
+}
+puntuacion($puntuaciones);
 
 
-
-// TESTS
+//TESTS
 assert(puntuacion($puntuaciones) == [
     "promedio" => 5.5,
     "max" => 9,
